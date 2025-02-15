@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photocards Virtuales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Compra tu Photocard Virtual</h1>
+    <div class="gallery">
+        <div class="card">
+            <img src="images/photocard1.jpg" alt="Photocard 1">
+            <button onclick="comprarPhotocard('Photocard 1')">Comprar</button>
+        </div>
+        <div class="card">
+            <img src="images/photocard2.jpg" alt="Photocard 2">
+            <button onclick="comprarPhotocard('Photocard 2')">Comprar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+function comprarPhotocard(nombre) {
+    let correo = prompt("Ingresa tu correo electrónico para recibir la photocard:");
+    if (correo) {
+        alert("La photocard '" + nombre + "' será enviada a " + correo);
+    }
+}
